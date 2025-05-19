@@ -40,6 +40,12 @@ enum ExtensionType: int
     case STATUS_REQUEST = 0x0005;
     
     /**
+     * 安全重协商信息扩展
+     * 参考 RFC 5746
+     */
+    case RENEGOTIATION_INFO = 0x00FF;
+    
+    /**
      * 支持的组扩展（椭圆曲线组等）
      * 在TLS 1.2中称为"elliptic_curves"
      */
