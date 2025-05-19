@@ -258,9 +258,9 @@ class KeyShareExtension extends AbstractExtension
     /**
      * 检查扩展是否适用于指定的TLS版本
      * 
-     * key_share扩展仅适用于TLS 1.3
+     * 密钥共享扩展仅适用于TLS 1.3
      * 
-     * @param string $tlsVersion TLS版本
+     * @param string $tlsVersion TLS版本（例如："1.2", "1.3"）
      * @return bool 是否适用
      */
     public function isApplicableForVersion(string $tlsVersion): bool

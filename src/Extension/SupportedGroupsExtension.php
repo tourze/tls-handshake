@@ -151,4 +151,17 @@ class SupportedGroupsExtension extends AbstractExtension
         }
         return $this->setGroups($groups);
     }
+    
+    /**
+     * 检查扩展是否适用于指定的TLS版本
+     * 
+     * 支持的组扩展适用于TLS 1.2和TLS 1.3
+     * 
+     * @param string $tlsVersion TLS版本（例如："1.2", "1.3"）
+     * @return bool 是否适用
+     */
+    public function isApplicableForVersion(string $tlsVersion): bool
+    {
+        return $tlsVersion === '1.2' || $tlsVersion === '1.3';
+    }
 }
