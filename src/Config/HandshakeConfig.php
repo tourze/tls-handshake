@@ -54,6 +54,20 @@ class HandshakeConfig implements HandshakeConfigInterface
     private ?string $privateKeyPath = null;
     
     /**
+     * 客户端证书文件路径
+     *
+     * @var string|null
+     */
+    private ?string $clientCertificatePath = null;
+    
+    /**
+     * 客户端私钥文件路径
+     *
+     * @var string|null
+     */
+    private ?string $clientPrivateKeyPath = null;
+    
+    /**
      * 启用的扩展列表
      *
      * @var array<string, bool>
@@ -149,6 +163,38 @@ class HandshakeConfig implements HandshakeConfigInterface
     public function getPrivateKeyPath(): ?string
     {
         return $this->privateKeyPath;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setClientCertificatePath(?string $path): void
+    {
+        $this->clientCertificatePath = $path;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function getClientCertificatePath(): ?string
+    {
+        return $this->clientCertificatePath;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setClientPrivateKeyPath(?string $path): void
+    {
+        $this->clientPrivateKeyPath = $path;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function getClientPrivateKeyPath(): ?string
+    {
+        return $this->clientPrivateKeyPath;
     }
     
     /**

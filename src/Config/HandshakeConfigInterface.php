@@ -83,6 +83,36 @@ interface HandshakeConfigInterface
     public function getPrivateKeyPath(): ?string;
     
     /**
+     * 设置客户端证书文件路径
+     *
+     * @param string|null $path 客户端证书文件路径
+     * @return void
+     */
+    public function setClientCertificatePath(?string $path): void;
+    
+    /**
+     * 获取客户端证书文件路径
+     *
+     * @return string|null
+     */
+    public function getClientCertificatePath(): ?string;
+    
+    /**
+     * 设置客户端私钥文件路径
+     *
+     * @param string|null $path 客户端私钥文件路径
+     * @return void
+     */
+    public function setClientPrivateKeyPath(?string $path): void;
+    
+    /**
+     * 获取客户端私钥文件路径
+     *
+     * @return string|null
+     */
+    public function getClientPrivateKeyPath(): ?string;
+    
+    /**
      * 启用指定的TLS扩展
      *
      * @param string $extension 扩展名称
