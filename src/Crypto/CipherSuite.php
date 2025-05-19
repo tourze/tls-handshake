@@ -49,6 +49,84 @@ class CipherSuite
     public const TLS_RSA_WITH_AES_256_CBC_SHA256 = 0x003D;
     
     /**
+     * TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+     * (RFC 5246)
+     */
+    public const TLS_DHE_RSA_WITH_AES_128_CBC_SHA = 0x0033;
+    
+    /**
+     * TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+     * (RFC 5246)
+     */
+    public const TLS_DHE_RSA_WITH_AES_256_CBC_SHA = 0x0039;
+    
+    /**
+     * TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+     * (RFC 5288)
+     */
+    public const TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 = 0x009E;
+    
+    /**
+     * TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+     * (RFC 5288)
+     */
+    public const TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 = 0x009F;
+    
+    /**
+     * TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+     * (RFC 4492)
+     */
+    public const TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA = 0xC013;
+    
+    /**
+     * TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+     * (RFC 4492)
+     */
+    public const TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA = 0xC014;
+    
+    /**
+     * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+     * (RFC 4492)
+     */
+    public const TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA = 0xC009;
+    
+    /**
+     * TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+     * (RFC 4492)
+     */
+    public const TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA = 0xC00A;
+    
+    /**
+     * TLS_RSA_WITH_AES_128_GCM_SHA256
+     * (RFC 5288)
+     */
+    public const TLS_RSA_WITH_AES_128_GCM_SHA256 = 0x009C;
+    
+    /**
+     * TLS_RSA_WITH_AES_256_GCM_SHA384
+     * (RFC 5288)
+     */
+    public const TLS_RSA_WITH_AES_256_GCM_SHA384 = 0x009D;
+    
+    /**
+     * TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+     * (RFC 7905)
+     */
+    public const TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = 0xCCA8;
+    
+    /**
+     * TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+     * (RFC 7905)
+     */
+    public const TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 = 0xCCA9;
+    
+    /**
+     * TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+     * (RFC 7905)
+     */
+    public const TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = 0xCCAA;
+    
+    /**
      * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
      * (RFC 5289)
      */
@@ -179,6 +257,19 @@ class CipherSuite
             self::TLS_RSA_WITH_AES_256_CBC_SHA => 'TLS_RSA_WITH_AES_256_CBC_SHA',
             self::TLS_RSA_WITH_AES_128_CBC_SHA256 => 'TLS_RSA_WITH_AES_128_CBC_SHA256',
             self::TLS_RSA_WITH_AES_256_CBC_SHA256 => 'TLS_RSA_WITH_AES_256_CBC_SHA256',
+            self::TLS_DHE_RSA_WITH_AES_128_CBC_SHA => 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA',
+            self::TLS_DHE_RSA_WITH_AES_256_CBC_SHA => 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA',
+            self::TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 => 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256',
+            self::TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 => 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384',
+            self::TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA',
+            self::TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA',
+            self::TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA',
+            self::TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA',
+            self::TLS_RSA_WITH_AES_128_GCM_SHA256 => 'TLS_RSA_WITH_AES_128_GCM_SHA256',
+            self::TLS_RSA_WITH_AES_256_GCM_SHA384 => 'TLS_RSA_WITH_AES_256_GCM_SHA384',
+            self::TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256',
+            self::TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256',
+            self::TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => 'TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256',
             self::TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 => 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256',
             self::TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 => 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384',
             self::TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 => 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256',
@@ -208,13 +299,32 @@ class CipherSuite
             self::TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
             self::TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
             
+            // CHACHA20-POLY1305套件
+            self::TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+            self::TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+            self::TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+            
+            // DHE带GCM的加密套件
+            self::TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,
+            self::TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,
+            
             // 然后是ECDHE带CBC的加密套件
             self::TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,
             self::TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,
             self::TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,
             self::TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,
+            self::TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,
+            self::TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
+            self::TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
+            self::TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,
+            
+            // DHE带CBC的加密套件
+            self::TLS_DHE_RSA_WITH_AES_256_CBC_SHA,
+            self::TLS_DHE_RSA_WITH_AES_128_CBC_SHA,
             
             // 最后是RSA加密套件（不具备前向保密特性）
+            self::TLS_RSA_WITH_AES_256_GCM_SHA384,
+            self::TLS_RSA_WITH_AES_128_GCM_SHA256,
             self::TLS_RSA_WITH_AES_256_CBC_SHA256,
             self::TLS_RSA_WITH_AES_128_CBC_SHA256,
             self::TLS_RSA_WITH_AES_256_CBC_SHA,
