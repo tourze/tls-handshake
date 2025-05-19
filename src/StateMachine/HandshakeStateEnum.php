@@ -43,6 +43,11 @@ enum HandshakeStateEnum: string
     case WAIT_CLIENT_KEY_EXCHANGE = 'WAIT_CLIENT_KEY_EXCHANGE';
     
     /**
+     * 客户端提供了证书，等待密钥交换
+     */
+    case WAIT_CLIENT_KEY_EXCHANGE_WITH_CERT = 'WAIT_CLIENT_KEY_EXCHANGE_WITH_CERT';
+    
+    /**
      * 等待证书验证
      */
     case WAIT_CERTIFICATE_VERIFY = 'WAIT_CERTIFICATE_VERIFY';
@@ -56,6 +61,11 @@ enum HandshakeStateEnum: string
      * 等待握手完成消息
      */
     case WAIT_FINISHED = 'WAIT_FINISHED';
+
+    /**
+     * 等待客户端握手完成消息
+     */
+    case WAIT_CLIENT_FINISHED = 'WAIT_CLIENT_FINISHED';
     
     /**
      * TLS连接已建立
@@ -76,4 +86,14 @@ enum HandshakeStateEnum: string
      * TLS 1.3特有：等待新的会话凭证
      */
     case WAIT_NEW_SESSION_TICKET = 'WAIT_NEW_SESSION_TICKET';
+
+    /**
+     * TLS 1.3特有：正在处理早期数据(0-RTT)
+     */
+    case PROCESS_EARLY_DATA = 'PROCESS_EARLY_DATA';
+
+    /**
+     * TLS 1.3特有：等待客户端证书验证
+     */
+    case WAIT_CLIENT_VERIFY = 'WAIT_CLIENT_VERIFY';
 }
